@@ -15,7 +15,7 @@ Please review and test thoroughly in a safe environment before deploying to prod
 3. Compare extensionAttributes between On Prem and Entra ID computer objects. 
 4. Update the Entra ID extensionAttributes based on data from On Prem object. 
 
-You can find the full script [here] (https://github.com/aklinden/Set-EntraIDExtensionAttributes)
+You can find the full script [here](https://github.com/aklinden/Set-EntraIDExtensionAttributes)
 
 ---
 
