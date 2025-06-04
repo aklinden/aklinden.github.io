@@ -1,11 +1,4 @@
-# Create Smarter Dynamic Groups
-
-### Disclaimer
-
-This script is provided "as is" without warranty of any kind, express or implied. Use it at your own risk. The author assumes no responsibility for any damage or loss arising from the use of this script.
-
-Please review and test thoroughly in a safe environment before deploying to production.
-
+# Create Smarter Dynamic Groups with Set-EntraIDExtensionAttributes 
 ---
 
 ## tl;dr
@@ -23,7 +16,7 @@ You can find the full script [here](https://github.com/aklinden/Set-EntraIDExten
 
 ### Introduction
 
-The idea for this script came from someone in our software deployment team who wasn't satisfied with the way we were building dynamic groups in Entra ID. Rather than some kind of real property that marked a device from PDX, our dynamic group rules were something like `(device.deviceName -startsWith "P-") -or (device.deviceName -startsWith "PDX")`. This was fine for the most part, but what happens when someone names a device incorrectly? This method left a lot of room for human error, and the dynamic groups weren't matching up as closely to our Active Directory groups as we wanted them to. After some research, software deployment guy found that extensionAttributes could be used in Entra ID, and that we hadn't been using them in Active Directory device objects until this point.  
+The idea for this script came from someone in our software deployment team who wasn't satisfied with the way we were building dynamic groups in Entra ID. Rather than some kind of real property that marked a device from PDX, our dynamic group rules were something like `(device.deviceName -startsWith "P-") -or (device.deviceName -startsWith "PDX")`. This was fine for the most part, but what happens when someone names a device incorrectly? What if someone moves to another office and we forget to change the name of their device? This method left a lot of room for human error, and the dynamic groups weren't matching up as closely to our Active Directory groups as we wanted them to. After some research, software deployment guy found that extensionAttributes could be used in Entra ID, and that we hadn't been using them in Active Directory device objects until this point.  
 
 ### Creating extensionAttributes
 
